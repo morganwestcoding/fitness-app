@@ -11,7 +11,7 @@ const HeroBanner = () => {
         color='#FF2625'
         fontWeight='600'
         fontSize='26px'>
-            Fitness Club
+            Morgan Fitness Club
         </Typography>
         <Typography fontWeight={700}>
             Sweat, Smile <br/> and Repeat
