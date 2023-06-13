@@ -14,8 +14,13 @@ const SearchExercises = () => {
       <Box position="relative" mb="72px">
         <TextField
         sx={{
-          input: { fontWeight: '700',
-        border: 'none', borderRadius: '4px'}
+          input: { 
+            fontWeight: '700',
+            border: 'none', 
+            borderRadius: '4px'},
+            width: { lg: '800px', xs: '350px' },
+            backgroundColor: '#ffff',
+            borderRadius: '40px'
       }}
         height="76px"
         value=""
@@ -23,6 +28,18 @@ const SearchExercises = () => {
         placeholder="Search Exercises"
         type="text"
         />
+        <Button className='search-btn'
+        sx={{
+          bgcolor: '#FF2625',
+          color: '#ffff',
+          textTransform: 'none',
+          width: { lg: '175px', xs: '80px'},
+          fontSize: { lg: '20px', xs: '14px'},
+          height: '56px',
+          position: 'absolute'
+        }}>
+          Search
+        </Button>
       </Box>
 
     </Stack>
