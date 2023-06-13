@@ -1,14 +1,23 @@
 import React, { useEffect, useState} from 'react'
 import {Box, Button, Stack, TextField, Typography } from '@mui/material';
+import { SearchOffSharp } from '@mui/icons-material';
 
 const SearchExercises = () => {
+  const [search, setSearch] = useState('')
+
+  const handleSearch = async () => {
+    if(search) { 
+      //const exerciseData = await fetchData();
+    }
+  }
+
   return (
     <Stack alignItems ="center" mt="37px"
     justifyContent="center" p="20px">
       <Typography fontWeight={700} sx={{
         fontSize: { lg: '44px', xs: '30px'}}}
         mb="50px" textAlign='center'>
-        Awsome Excersises You <br/>
+        Awsome Excercises You <br/>
         Should Know
       </Typography>
       <Box position="relative" mb="72px">
@@ -23,8 +32,8 @@ const SearchExercises = () => {
             borderRadius: '40px'
       }}
         height="76px"
-        value=""
-        onChange={(e) => {}}
+        value={search}
+        onChange={(e) => setSearch(e.target.value.toLowerCase())}
         placeholder="Search Exercises"
         type="text"
         />
@@ -38,7 +47,8 @@ const SearchExercises = () => {
           height: '56px',
           position: 'absolute',
           right: '0'
-        }}>
+        }}
+        onClick={handleSearch}>
           Search
         </Button>
       </Box>
